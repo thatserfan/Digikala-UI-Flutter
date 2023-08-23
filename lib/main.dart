@@ -10,6 +10,7 @@ void main() {
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.white,
           secondary: Colors.red,
+          onPrimary: Colors.grey,
         ),
       ),
       home: const TabsScreen(),

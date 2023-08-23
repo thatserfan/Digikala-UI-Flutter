@@ -1,3 +1,4 @@
+import 'package:digikala_ui/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -23,6 +24,8 @@ class _TabsScreenState extends State<TabsScreen> {
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
         shadowColor: Colors.black,
         elevation: 0.8,
+        title: SearchBarWidget(),
+        centerTitle: true,
       ),
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
