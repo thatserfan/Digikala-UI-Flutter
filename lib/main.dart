@@ -5,7 +5,7 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Digikala',
-      theme: ThemeData().copyWith(
+      theme: ThemeData(fontFamily: 'byekan').copyWith(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.white,

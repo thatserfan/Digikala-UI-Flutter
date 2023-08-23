@@ -8,7 +8,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-  int _selectedPageIndex = 0;
+  int _selectedPageIndex = 3;
 
   @override
   Widget build(BuildContext context) {
