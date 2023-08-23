@@ -7,7 +7,10 @@ void main() {
       title: 'Digikala',
       theme: ThemeData().copyWith(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.white,
+          secondary: Colors.red,
+        ),
       ),
       home: const TabsScreen(),
     ),

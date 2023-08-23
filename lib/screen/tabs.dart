@@ -8,8 +8,16 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
+  int _selectedPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
+    void _selectedPage(int index) {
+      setState(() {
+        _selectedPageIndex = index;
+      });
+    }
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
@@ -18,22 +26,31 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: _selectedPage,
+        currentIndex: _selectedPageIndex,
+        selectedItemColor: Colors.black,
         type: BottomNavigationBarType.fixed,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
+            icon: Icon(
+                _selectedPageIndex == 0 ? Icons.person : Icons.person_outline),
             label: "دیجی کالای من",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: Icon(_selectedPageIndex == 1
+                ? Icons.shopping_cart
+                : Icons.shopping_cart_outlined),
             label: "سبد خرید",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.category_outlined),
-            label: "دسته بندی ها",
+            icon: Icon(_selectedPageIndex == 2
+                ? Icons.category
+                : Icons.category_outlined),
+            label: "دسته بندی ها",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+                _selectedPageIndex == 3 ? Icons.home : Icons.home_outlined),
             label: "خانه",
           ),
         ],
