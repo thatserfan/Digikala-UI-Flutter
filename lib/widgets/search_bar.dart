@@ -27,6 +27,10 @@ class SearchBarWidget extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5),
+            ),
+            Icon(Icons.search),
           ],
         ),
       ),
