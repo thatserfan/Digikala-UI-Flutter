@@ -26,6 +26,8 @@ class _TabsScreenState extends State<TabsScreen> {
       case 3:
         activePage = const HomeScreen();
         break;
+      default:
+        activePage = const Text('No HOME');
     }
 
     return Scaffold(

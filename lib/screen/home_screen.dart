@@ -1,3 +1,4 @@
+import 'package:digikala_ui/widgets/image_slider.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,9 +6,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      //todo App bar must be removed and move to tabs file
-      backgroundColor: Theme.of(context).colorScheme.onSecondary,
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 20,
+          ),
+          child: ImageSlider(),
+        ),
+      ],
     );
   }
 }
