@@ -1,3 +1,4 @@
+import 'package:digikala_ui/screen/home_screen.dart';
 import 'package:digikala_ui/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -13,10 +14,18 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    void _selectedPage(int index) {
+    Widget activePage = const HomeScreen();
+
+    void selectedPage(int index) {
       setState(() {
         _selectedPageIndex = index;
       });
+    }
+
+    switch (_selectedPageIndex) {
+      case 3:
+        activePage = const HomeScreen();
+        break;
     }
 
     return Scaffold(
@@ -24,12 +33,12 @@ class _TabsScreenState extends State<TabsScreen> {
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
         shadowColor: Colors.black,
         elevation: 0.8,
-        title: SearchBarWidget(),
+        title: const SearchBarWidget(),
         centerTitle: true,
       ),
-      body: Container(),
+      body: activePage,
       bottomNavigationBar: BottomNavigationBar(
-        onTap: _selectedPage,
+        onTap: selectedPage,
         currentIndex: _selectedPageIndex,
         selectedItemColor: Colors.black,
         type: BottomNavigationBarType.fixed,

@@ -8,11 +8,6 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       //todo App bar must be removed and move to tabs file
       backgroundColor: Theme.of(context).colorScheme.onSecondary,
-      body: Container(
-        child: Column(
-          children: [],
-        ),
-      ),
     );
   }
 }
