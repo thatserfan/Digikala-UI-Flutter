@@ -19,7 +19,7 @@ class _ImageSliderState extends State<ImageSlider> {
         CarouselSlider(
           carouselController: _controller,
           options: CarouselOptions(
-            height: 180.0,
+            height: 200.0,
             autoPlay: true,
             onPageChanged: (index, reason) {
               setState(() {
@@ -35,9 +35,11 @@ class _ImageSliderState extends State<ImageSlider> {
                   margin: const EdgeInsets.symmetric(horizontal: 5.0),
                   decoration: BoxDecoration(
                     color: Colors.amber,
+                    image: DecorationImage(
+                        image: AssetImage('assets/image/${i}.jpg'),
+                        fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Image.asset('assets/image/4.png'),
                 );
               },
             );
