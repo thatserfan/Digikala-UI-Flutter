@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class ImageSlider extends StatefulWidget {
+  const ImageSlider({super.key});
   @override
   State<ImageSlider> createState() => _ImageSliderState();
 }
@@ -36,7 +37,7 @@ class _ImageSliderState extends State<ImageSlider> {
                   decoration: BoxDecoration(
                     color: Colors.amber,
                     image: DecorationImage(
-                        image: AssetImage('assets/image/${i}.jpg'),
+                        image: AssetImage('assets/image/$i.jpg'),
                         fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(20),
                   ),
