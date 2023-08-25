@@ -14,16 +14,22 @@ class DescriptionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: Column(
-        children: [
-          SizedBox(
-            width: 60,
-            height: 60,
-            child: image,
-          ),
-          const SizedBox(height: 10),
-          text,
-        ],
+      child: SizedBox(
+        width: 70,
+        height: 100,
+        child: Column(
+          children: [
+            SizedBox(
+              width: 60,
+              height: 60,
+              child: image,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            text,
+          ],
+        ),
       ),
     );
   }
