@@ -1,3 +1,4 @@
+import 'package:digikala_ui/widgets/buttons_bar.dart';
 import 'package:digikala_ui/widgets/image_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
           ),
           child: ImageSlider(),
         ),
+        ButtonsBar(),
       ],
     );
   }
