@@ -20,8 +20,9 @@ class _ImageSliderState extends State<ImageSlider> {
         CarouselSlider(
           carouselController: _controller,
           options: CarouselOptions(
-            height: 200.0,
-            autoPlay: true,
+            aspectRatio: 2,
+            // height: 200.0,
+            autoPlay: false,
             onPageChanged: (index, reason) {
               setState(() {
                 _current = index;
@@ -33,9 +34,8 @@ class _ImageSliderState extends State<ImageSlider> {
               builder: (BuildContext context) {
                 return Container(
                   width: MediaQuery.of(context).size.width,
-                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                  margin: const EdgeInsets.symmetric(horizontal: 4.0),
                   decoration: BoxDecoration(
-                    color: Colors.amber,
                     image: DecorationImage(
                         image: AssetImage('assets/image/$i.jpg'),
                         fit: BoxFit.fill),
