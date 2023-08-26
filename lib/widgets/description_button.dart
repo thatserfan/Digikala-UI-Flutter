@@ -20,7 +20,7 @@ class DescriptionButton extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              width: 60,
+              width: 50,
               height: 60,
               child: image,
             ),
