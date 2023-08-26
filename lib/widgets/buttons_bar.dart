@@ -37,7 +37,7 @@ class ButtonsBar extends StatelessWidget {
                 backgroundColor: Colors.grey[200],
                 child: Icon(Icons.more_horiz, color: Colors.grey[500]),
               ),
-              text: Text('بیشتر'),
+              text: const Text('بیشتر'),
             ),
             DescriptionButton(
               image: Image.asset('assets/image/des-buttons/digiclub.png'),
