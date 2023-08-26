@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/image/
     - assets/image/des-buttons/
+    - assets/image/special-offers/
 
   fonts:
     - family: byekan
