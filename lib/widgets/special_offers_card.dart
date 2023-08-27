@@ -12,10 +12,12 @@ class SpecialOffersCard extends StatelessWidget {
         child: Column(children: [
           Padding(
             padding: const EdgeInsets.only(top: 5, left: 20),
-            child: Text('شگفت انگیز اختصاصی اپ',
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: Theme.of(context).colorScheme.secondary,
-                    fontWeight: FontWeight.bold)),
+            child: Text(
+              'شگفت انگیز اختصاصی اپ',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ]),
       ),
