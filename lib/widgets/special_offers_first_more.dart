@@ -8,7 +8,7 @@ class SpecialOffersFirstMore extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 15,
-        vertical: 15,
+        vertical: 35,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,

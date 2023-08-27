@@ -1,3 +1,4 @@
+import 'package:digikala_ui/widgets/special_offers_card.dart';
 import 'package:digikala_ui/widgets/special_offers_first_more.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class SpecialOffers extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
+            SpecialOffersCard(),
             SpecialOffersFirstMore(),
           ],
         ),
