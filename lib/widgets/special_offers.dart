@@ -13,23 +13,11 @@ class SpecialOffers extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            Card(
-              child: Container(
-                height: 280,
-                width: 150,
-                child: Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, left: 20),
-                    child: Text('شگفت انگیز اختصاصی اپ',
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                            color: Theme.of(context).colorScheme.secondary,
-                            fontWeight: FontWeight.bold)),
-                  ),
-                ]),
-              ),
-            ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 15,
+                vertical: 15,
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
