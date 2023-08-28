@@ -6,14 +6,15 @@ class SpecialOffersCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.white,
       child: SizedBox(
         height: 350,
-        width: 150,
+        width: 180,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(children: [
             Padding(
-              padding: const EdgeInsets.only(top: 5, left: 20),
+              padding: const EdgeInsets.only(top: 5, left: 30),
               child: Text(
                 'شگفت انگیز اختصاصی اپ',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -32,11 +33,15 @@ class SpecialOffersCard extends StatelessWidget {
                   'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت',
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
-                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: Colors.black, fontWeight: FontWeight.bold),
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodySmall
+                      ?.copyWith(color: Colors.black),
                   textDirection: TextDirection.rtl),
             ),
-            const SizedBox(height: 70),
+            const Expanded(
+              child: SizedBox(),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -76,11 +81,46 @@ class SpecialOffersCard extends StatelessWidget {
                 ),
               ],
             ),
-            const Expanded(
-              child: SizedBox(),
+            Padding(
+              padding: const EdgeInsets.only(right: 30),
+              child: Text(
+                '۵۰۰,۰۰۰',
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      color: Colors.grey,
+                      decoration: TextDecoration.lineThrough,
+                      decorationThickness: 1.5,
+                    ),
+              ),
             ),
-            Text(
-              '۵۰:۰۰',
+            const SizedBox(height: 10),
+            LinearProgressIndicator(
+              value: 0.5,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  '۵۰:۰۰',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+                Row(
+                  children: [
+                    const Text('فروش رفته',
+                        style: TextStyle(
+                          color: Colors.grey,
+                        )),
+                    Text(
+                      ' ۵۰%',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary),
+                    ),
+                  ],
+                )
+              ],
             )
           ]),
         ),
