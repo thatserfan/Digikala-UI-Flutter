@@ -9,22 +9,25 @@ class MiniBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 150,
-      decoration: image != null
-          ? BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: image!,
+    return Padding(
+      padding: const EdgeInsets.all(5),
+      child: Container(
+        width: 160,
+        height: 120,
+        decoration: image != null
+            ? BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: image!,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              )
+            : BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: background,
               ),
-              borderRadius: BorderRadius.circular(20),
-            )
-          : BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: background,
-            ),
-      child: child,
+        child: child,
+      ),
     );
   }
 }
