@@ -37,7 +37,7 @@ class _ImageSliderState extends State<ImageSlider> {
                   margin: const EdgeInsets.symmetric(horizontal: 4.0),
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/image/$i.jpg'),
+                        image: AssetImage('assets/image/banner/$i.jpg'),
                         fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(20),
                   ),
