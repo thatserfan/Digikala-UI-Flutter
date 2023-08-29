@@ -7,17 +7,20 @@ class SpecialOffers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      width: double.infinity,
-      child: const SingleChildScrollView(
-        reverse: true,
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            SpecialOffersCard(),
-            SpecialOffersFirstMore(),
-          ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Container(
+        color: Colors.red,
+        width: double.infinity,
+        child: const SingleChildScrollView(
+          reverse: true,
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SpecialOffersCard(),
+              SpecialOffersFirstMore(),
+            ],
+          ),
         ),
       ),
     );
