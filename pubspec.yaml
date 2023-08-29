@@ -63,6 +63,7 @@ flutter:
 
   assets:
     - assets/image/
+    - assets/image/banner/
     - assets/image/des-buttons/
     - assets/image/special-offers/
     - assets/image/products/
