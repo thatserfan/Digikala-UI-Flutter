@@ -9,11 +9,12 @@ class MiniBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.all(5),
       child: Container(
-        width: 160,
-        height: 120,
+        width: width / 2.5,
+        height: (width / 2.5) / 1.3,
         decoration: image != null
             ? BoxDecoration(
                 image: DecorationImage(
