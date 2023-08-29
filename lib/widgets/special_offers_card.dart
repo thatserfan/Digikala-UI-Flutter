@@ -82,7 +82,7 @@ class SpecialOffersCard extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 30),
+              padding: const EdgeInsets.only(right: 40),
               child: Text(
                 '۵۰۰,۰۰۰',
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(
