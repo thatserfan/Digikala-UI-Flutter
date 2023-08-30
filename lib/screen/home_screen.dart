@@ -1,6 +1,7 @@
 import 'package:digikala_ui/widgets/buttons_bar.dart';
 import 'package:digikala_ui/widgets/image_slider.dart';
 import 'package:digikala_ui/widgets/mini_banner.dart';
+import 'package:digikala_ui/widgets/single_banner.dart';
 import 'package:digikala_ui/widgets/special_offers.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,6 @@ class HomeScreen extends StatelessWidget {
         ),
         ButtonsBar(),
         SpecialOffers(),
-
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -42,8 +42,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-
-        
+        SingleBanner(image: AssetImage('assets/image/single-banner/light.jpg')),
       ]),
     );
   }

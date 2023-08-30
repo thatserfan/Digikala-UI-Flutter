@@ -1,3 +1,4 @@
+import 'package:digikala_ui/screen/category_screen.dart';
 import 'package:digikala_ui/screen/home_screen.dart';
 import 'package:digikala_ui/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +24,9 @@ class _TabsScreenState extends State<TabsScreen> {
     }
 
     switch (_selectedPageIndex) {
+      case 2:
+        activePage = const CategoryScreen();
+        break;
       case 3:
         activePage = const HomeScreen();
         break;
