@@ -1,3 +1,4 @@
+import 'package:digikala_ui/screen/cart_screen.dart';
 import 'package:digikala_ui/screen/category_screen.dart';
 import 'package:digikala_ui/screen/home_screen.dart';
 import 'package:digikala_ui/widgets/search_bar.dart';
@@ -24,6 +25,9 @@ class _TabsScreenState extends State<TabsScreen> {
     }
 
     switch (_selectedPageIndex) {
+      case 1:
+        activePage = const CartScreen();
+        break;
       case 2:
         activePage = const CategoryScreen();
         break;
@@ -39,7 +43,9 @@ class _TabsScreenState extends State<TabsScreen> {
         backgroundColor: Theme.of(context).colorScheme.onSecondary,
         shadowColor: Colors.black,
         elevation: 0.8,
-        title: const SearchBarWidget(),
+        title: (_selectedPageIndex != 1)
+            ? const SearchBarWidget()
+            : Text('Its Cart'),
         centerTitle: true,
       ),
       body: activePage,
