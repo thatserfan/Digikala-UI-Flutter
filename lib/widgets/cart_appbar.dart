@@ -13,13 +13,6 @@ class CartAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _CartAppBarState extends State<CartAppBar> {
   @override
   Widget build(BuildContext context) {
-    int _selectedPageIndex = 0;
-
-    void selectedPage(int index) {
-      setState(() {
-        _selectedPageIndex = index;
-      });
-    }
 
     return const SafeArea(
       child: SizedBox(

@@ -11,7 +11,7 @@ class CartScreen extends StatelessWidget {
           Image.asset('assets/image/empty-cart.png'),
           const Text('سبد خرید شما خالی است'),
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(vertical: 20),
             child: Container(
               width: double.infinity,
               color: Colors.grey[200],
