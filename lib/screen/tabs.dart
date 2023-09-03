@@ -1,6 +1,7 @@
 import 'package:digikala_ui/screen/cart_screen.dart';
 import 'package:digikala_ui/screen/category_screen.dart';
 import 'package:digikala_ui/screen/home_screen.dart';
+import 'package:digikala_ui/widgets/cart_appbar.dart';
 import 'package:digikala_ui/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,18 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     Widget activePage = const HomeScreen();
 
+    PreferredSizeWidget searchBar = AppBar(
+      backgroundColor: Theme.of(context).colorScheme.onSecondary,
+      shadowColor: Colors.black,
+      elevation: 0.8,
+      title: (_selectedPageIndex != 1)
+          ? const SearchBarWidget()
+          : const CartAppBar(),
+      centerTitle: true,
+    );
+
+    PreferredSizeWidget activeAppBar = searchBar;
+
     void selectedPage(int index) {
       setState(() {
         _selectedPageIndex = index;
@@ -27,27 +40,22 @@ class _TabsScreenState extends State<TabsScreen> {
     switch (_selectedPageIndex) {
       case 1:
         activePage = const CartScreen();
+        activeAppBar = const CartAppBar();
         break;
       case 2:
         activePage = const CategoryScreen();
+        activeAppBar = searchBar;
         break;
       case 3:
         activePage = const HomeScreen();
+        activeAppBar = searchBar;
         break;
       default:
         activePage = const Text('No HOME');
     }
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.onSecondary,
-        shadowColor: Colors.black,
-        elevation: 0.8,
-        title: (_selectedPageIndex != 1)
-            ? const SearchBarWidget()
-            : Text('Its Cart'),
-        centerTitle: true,
-      ),
+      appBar: activeAppBar,
       body: activePage,
       bottomNavigationBar: BottomNavigationBar(
         onTap: selectedPage,
