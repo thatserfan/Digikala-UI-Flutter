@@ -14,6 +14,7 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 3;
+  int _selectedCartPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +24,7 @@ class _TabsScreenState extends State<TabsScreen> {
       backgroundColor: Theme.of(context).colorScheme.onSecondary,
       shadowColor: Colors.black,
       elevation: 0.8,
-      title: (_selectedPageIndex != 1)
-          ? const SearchBarWidget()
-          : const CartAppBar(),
+      title: const SearchBarWidget(),
       centerTitle: true,
     );
 
@@ -37,10 +36,23 @@ class _TabsScreenState extends State<TabsScreen> {
       });
     }
 
+    void changedPage(int index) {
+      setState(() {
+        _selectedCartPageIndex = index;
+      });
+    }
+
     switch (_selectedPageIndex) {
       case 1:
         activePage = const CartScreen();
-        activeAppBar = const CartAppBar();
+        activeAppBar = CartAppBar(
+          onChanged: changedPage,
+        );
+        if (_selectedCartPageIndex == 0) {
+          activePage = const CartScreen();
+        } else {
+          activePage = const Text('لیست خرید بعدی');
+        }
         break;
       case 2:
         activePage = const CategoryScreen();

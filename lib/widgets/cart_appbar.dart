@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CartAppBar extends StatefulWidget implements PreferredSizeWidget {
-  const CartAppBar({super.key});
+  const CartAppBar({super.key, required this.onChanged});
+
+  final void Function(int index) onChanged;
 
   @override
   State<CartAppBar> createState() => _CartAppBarState();
@@ -10,8 +12,9 @@ class CartAppBar extends StatefulWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size(200, kToolbarHeight);
 }
 
+var _selectedAppBar = 0;
+
 class _CartAppBarState extends State<CartAppBar> {
-  var _selectedAppBar = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,6 +27,7 @@ class _CartAppBarState extends State<CartAppBar> {
               onTap: () {
                 setState(() {
                   _selectedAppBar = 1;
+                  widget.onChanged(_selectedAppBar);
                 });
               },
               child: Column(
@@ -56,6 +60,7 @@ class _CartAppBarState extends State<CartAppBar> {
               onTap: () {
                 setState(() {
                   _selectedAppBar = 0;
+                  widget.onChanged(_selectedAppBar);
                 });
               },
               child: Column(
