@@ -1,3 +1,4 @@
+import 'package:digikala_ui/screen/cart_next_list_screen.dart';
 import 'package:digikala_ui/screen/cart_screen.dart';
 import 'package:digikala_ui/screen/category_screen.dart';
 import 'package:digikala_ui/screen/home_screen.dart';
@@ -51,7 +52,7 @@ class _TabsScreenState extends State<TabsScreen> {
         if (_selectedCartPageIndex == 0) {
           activePage = const CartScreen();
         } else {
-          activePage = const Text('لیست خرید بعدی');
+          activePage = const CartNextListScreen();
         }
         break;
       case 2:
