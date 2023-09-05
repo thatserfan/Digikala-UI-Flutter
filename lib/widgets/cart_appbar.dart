@@ -48,10 +48,14 @@ class _CartAppBarState extends State<CartAppBar> {
                     ),
                   ),
                   Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: (_selectedAppBar == 1)
+                          ? Colors.red
+                          : Colors.grey[100],
+                    ),
                     height: 3,
-                    color: (_selectedAppBar == 1)
-                        ? Colors.red
-                        : Colors.transparent,
                   ),
                 ],
               ),
@@ -82,9 +86,13 @@ class _CartAppBarState extends State<CartAppBar> {
                   ),
                   Container(
                     height: 3,
-                    color: (_selectedAppBar == 0)
-                        ? Colors.red
-                        : Colors.transparent,
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: (_selectedAppBar == 0)
+                          ? Colors.red
+                          : Colors.grey[100],
+                    ),
                   ),
                 ],
               ),
