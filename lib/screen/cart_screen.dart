@@ -13,7 +13,10 @@ class _CartScreenState extends State<CartScreen> {
     return Center(
       child: Column(
         children: [
-          Image.asset('assets/image/empty-cart.png'),
+          Image.asset(
+            'assets/image/empty-cart.png',
+            height: 150,
+          ),
           const Text('سبد خرید شما خالی است'),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20),
