@@ -1,10 +1,32 @@
+import 'dart:async';
+
+import 'package:digikala_ui/widgets/dot_loading.dart';
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
   @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  bool wait = false;
+  @override
   Widget build(BuildContext context) {
+    Widget btnText = const Text(
+      'ورود به دیجی کالا',
+      style: TextStyle(color: Colors.white),
+    );
+    Widget btnLoading = const DotLoading();
+    Widget btnContent;
+
+    if (wait) {
+      btnContent = btnLoading;
+    } else {
+      btnContent = btnText;
+    }
+
     return SingleChildScrollView(
       child: Center(
         child: Padding(
@@ -41,15 +63,27 @@ class ProfileScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 color: Theme.of(context).colorScheme.secondary,
                 child: InkWell(
-                  onTap: () {},
-                  child: const SizedBox(
+                  onTap: () {
+                    setState(() {
+                      wait = true;
+                    });
+                    Timer.periodic(
+                      const Duration(seconds: 3),
+                      (timer) {
+                        if (timer.tick == 1) {
+                          setState(() {
+                            wait = false;
+                          });
+                          timer.cancel();
+                        }
+                      },
+                    );
+                  },
+                  child: SizedBox(
                     width: double.infinity,
                     height: 50,
                     child: Center(
-                      child: Text(
-                        'ورود به دیجی کالا',
-                        style: TextStyle(color: Colors.white),
-                      ),
+                      child: btnContent,
                     ),
                   ),
                 ),
