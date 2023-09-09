@@ -2,7 +2,7 @@ import 'package:digikala_ui/screen/cart_next_list_screen.dart';
 import 'package:digikala_ui/screen/cart_screen.dart';
 import 'package:digikala_ui/screen/category_screen.dart';
 import 'package:digikala_ui/screen/home_screen.dart';
-import 'package:digikala_ui/screen/profile_screen.dart';
+import 'package:digikala_ui/screen/my_digi_screen.dart';
 import 'package:digikala_ui/widgets/cart_appbar.dart';
 import 'package:digikala_ui/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
     switch (_selectedPageIndex) {
       case 0:
-        activePage = const ProfileScreen();
+        activePage = const MyDigiScreen();
         activeAppBar = AppBar(
           actions: [
             IconButton(
