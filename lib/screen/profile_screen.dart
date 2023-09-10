@@ -1,4 +1,8 @@
+import 'package:digikala_ui/widgets/profile_button.dart';
+import 'package:digikala_ui/widgets/status_button.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/single_banner.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -80,51 +84,56 @@ class ProfileScreen extends StatelessWidget {
             reverse: true,
             child: Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'assets/image/profile-icons/status-returned.png',
-                        width: 80,
-                      ),
-                      const Text('در حال پردازش'),
-                    ],
+                StatusButton(
+                  image: Image.asset(
+                    'assets/image/profile-icons/status-returned.png',
                   ),
+                  title: 'مرجوع شده',
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'assets/image/profile-icons/status-delivered.png',
-                        width: 80,
-                      ),
-                      const Text('در حال پردازش'),
-                    ],
+                StatusButton(
+                    image: Image.asset(
+                      'assets/image/profile-icons/status-delivered.png',
+                    ),
+                    title: 'تحویل شده'),
+                StatusButton(
+                  image: Image.asset(
+                    'assets/image/profile-icons/status-processing.png',
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        'assets/image/profile-icons/status-processing.png',
-                        width: 80,
-                      ),
-                      const Text('در حال پردازش'),
-                    ],
-                  ),
+                  title: 'در حال پردازش',
                 ),
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Container(
-              height: 10,
-              color: Colors.grey[300],
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: SingleBanner(
+              image: AssetImage('assets/image/single-banner/light.jpg'),
             ),
+          ),
+          ProfileButton(
+            icon: const Icon(Icons.favorite_border),
+            title: 'لیست ها',
+            onTap: () {},
+          ),
+          ProfileButton(
+            icon: const Icon(Icons.mode_comment_outlined),
+            title: 'نقد و نظرات',
+            onTap: () {},
+          ),
+          ProfileButton(
+            icon: const Icon(Icons.signpost_outlined),
+            title: 'آدرس ها',
+            onTap: () {},
+          ),
+          ProfileButton(
+            icon: const Icon(Icons.credit_card),
+            title: 'کارت های هدیه',
+            onTap: () {},
+          ),
+          ProfileButton(
+            icon: const Icon(Icons.person_outline),
+            title: 'اطلاعات حساب کاربری',
+            onTap: () {},
           ),
         ],
       ),
