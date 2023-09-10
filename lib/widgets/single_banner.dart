@@ -13,8 +13,8 @@ class SingleBanner extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5),
       child: Container(
-        width: width / 1.2,
-        height: (width / 1.2) / 2.5,
+        width: width / 1.1,
+        height: (width / 1.1) / 2.5,
         decoration: image != null
             ? BoxDecoration(
                 image: DecorationImage(
