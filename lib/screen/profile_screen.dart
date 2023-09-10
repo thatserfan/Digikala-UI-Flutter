@@ -17,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 5),
           Center(
             child: Text(
-              '۰۹۳۵۷۳۰۰۳۲۷',
+              '09357300327',
               style: Theme.of(context)
                   .textTheme
                   .titleSmall
@@ -66,6 +66,64 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 )
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Container(
+              height: 10,
+              color: Colors.grey[300],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            reverse: true,
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/image/profile-icons/status-returned.png',
+                        width: 80,
+                      ),
+                      const Text('در حال پردازش'),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/image/profile-icons/status-delivered.png',
+                        width: 80,
+                      ),
+                      const Text('در حال پردازش'),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/image/profile-icons/status-processing.png',
+                        width: 80,
+                      ),
+                      const Text('در حال پردازش'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Container(
+              height: 10,
+              color: Colors.grey[300],
             ),
           ),
         ],
