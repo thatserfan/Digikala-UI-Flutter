@@ -17,7 +17,7 @@ class CategoryItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Card(
-        color: Colors.grey[200],
+        color: const Color.fromARGB(255, 242, 242, 242),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: Column(
@@ -31,8 +31,13 @@ class CategoryItem extends StatelessWidget {
                 child: Text(categoryItemName,
                     style: Theme.of(context).textTheme.bodySmall),
               ),
-              Text('کالا +$categoryItemQuantity',
-                  style: Theme.of(context).textTheme.bodySmall),
+              Row(
+                children: [
+                  Text('کالا ', style: Theme.of(context).textTheme.bodySmall),
+                  Text('$categoryItemQuantity+',
+                      style: Theme.of(context).textTheme.bodySmall),
+                ],
+              ),
             ],
           ),
         ),
