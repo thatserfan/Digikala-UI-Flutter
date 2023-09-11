@@ -18,7 +18,7 @@ class ProfileButton extends StatelessWidget {
       onTap: onTap,
       child: SizedBox(
         width: double.infinity,
-        height: 50,
+        height: 60,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -30,7 +30,10 @@ class ProfileButton extends StatelessWidget {
                     child: Icon(Icons.keyboard_arrow_left, color: Colors.grey),
                   ),
                   const Expanded(child: SizedBox()),
-                  Text(title),
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: icon,
