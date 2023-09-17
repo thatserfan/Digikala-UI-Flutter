@@ -10,6 +10,7 @@ class SpecialOffersCard extends StatelessWidget {
       color: Colors.white,
       elevation: 0,
       child: InkWell(
+        borderRadius: BorderRadius.circular(10),
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => const DetailProduct(),
@@ -53,34 +54,48 @@ class SpecialOffersCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
-                        'تومان',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge
-                            ?.copyWith(fontWeight: FontWeight.bold),
+                      Row(
+                        children: [
+                          Text(
+                            'تومان',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge
+                                ?.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          const SizedBox(width: 1),
+                          Text(
+                            '1.000.000',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelLarge
+                                ?.copyWith(fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
                       Text(
-                        '۵۰۰,۰۰۰',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge
-                            ?.copyWith(fontWeight: FontWeight.bold),
+                        '500.000',
+                        style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                              color: Colors.grey,
+                              decoration: TextDecoration.lineThrough,
+                              decorationThickness: 1.5,
+                            ),
                       ),
                     ],
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Theme.of(context).colorScheme.secondary,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 2),
                       child: Text(
-                        '۵۰%',
+                        '50%',
                         style: Theme.of(context)
                             .textTheme
                             .labelMedium
@@ -92,17 +107,6 @@ class SpecialOffersCard extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 45),
-                child: Text(
-                  '۵۰۰,۰۰۰',
-                  style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                        color: Colors.grey,
-                        decoration: TextDecoration.lineThrough,
-                        decorationThickness: 1.5,
-                      ),
-                ),
-              ),
               const SizedBox(height: 10),
               LinearProgressIndicator(
                 value: 0.5,
@@ -113,7 +117,7 @@ class SpecialOffersCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    '۵۰:۰۰',
+                    '1:50:02',
                     style: TextStyle(
                       color: Colors.grey,
                     ),
@@ -125,7 +129,7 @@ class SpecialOffersCard extends StatelessWidget {
                             color: Colors.grey,
                           )),
                       Text(
-                        ' ۵۰%',
+                        ' 50%',
                         style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary),
                       ),
