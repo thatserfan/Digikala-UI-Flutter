@@ -25,7 +25,7 @@ class _TabsScreenState extends State<TabsScreen> {
     PreferredSizeWidget searchBar = AppBar(
       backgroundColor: Theme.of(context).colorScheme.onSecondary,
       shadowColor: Colors.black,
-      elevation: 0.8,
+      scrolledUnderElevation: 0,
       title: const SearchBarWidget(),
       centerTitle: true,
     );
