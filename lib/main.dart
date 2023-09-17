@@ -9,7 +9,7 @@ void main() {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.white,
-          secondary: Colors.red,
+          secondary: const Color.fromARGB(255,248, 41, 60),
           onPrimary: Colors.grey,
         ),
       ),
