@@ -22,7 +22,7 @@ class _ImageSliderState extends State<ImageSlider> {
           options: CarouselOptions(
             aspectRatio: 2,
             // height: 200.0,
-            autoPlay: false,
+            autoPlay: true,
             onPageChanged: (index, reason) {
               setState(() {
                 _current = index;
