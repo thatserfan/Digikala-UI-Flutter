@@ -33,7 +33,7 @@ class DetailProductBottomSheet extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              beforePrice.toString(),
+                              formatBeforePrice.toString(),
                               style: Theme.of(context)
                                   .textTheme
                                   .titleLarge
