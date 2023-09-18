@@ -20,7 +20,8 @@ class _ImageSliderState extends State<ImageSlider> {
         CarouselSlider(
           carouselController: _controller,
           options: CarouselOptions(
-            aspectRatio: 2,
+            viewportFraction: 0.9,
+            aspectRatio: 1.9,
             // height: 200.0,
             autoPlay: true,
             onPageChanged: (index, reason) {

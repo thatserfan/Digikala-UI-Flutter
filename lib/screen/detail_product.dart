@@ -1,4 +1,5 @@
 import 'package:digikala_ui/widgets/detail_product_bottom_sheet.dart';
+import 'package:digikala_ui/widgets/product_image_slider.dart';
 import 'package:digikala_ui/widgets/special_offers_detail_timer.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +41,21 @@ class DetailProduct extends StatelessWidget {
       ),
       body: const SingleChildScrollView(
         child: Column(
-          children: [SpecialOffersDetailTimer()],
+          children: [
+            SpecialOffersDetailTimer(),
+            ProductImageSlider(
+              images: [
+                'assets/image/products/iphone13/1.png',
+                'assets/image/products/iphone13/2.jpg',
+                'assets/image/products/iphone13/3.jpg',
+                'assets/image/products/iphone13/4.jpg',
+                'assets/image/products/iphone13/5.jpg',
+                'assets/image/products/iphone13/6.jpg',
+                'assets/image/products/iphone13/7.jpg',
+                'assets/image/products/iphone13/8.jpg',
+              ],
+            ),
+          ],
         ),
       ),
     );
