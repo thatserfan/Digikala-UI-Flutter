@@ -39,11 +39,11 @@ class DetailProduct extends StatelessWidget {
         price: 12600000,
         beforePrice: 86000000,
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            SpecialOffersDetailTimer(),
-            ProductImageSlider(
+            const SpecialOffersDetailTimer(),
+            const ProductImageSlider(
               images: [
                 'assets/image/products/iphone13/1.png',
                 'assets/image/products/iphone13/2.jpg',
@@ -54,6 +54,80 @@ class DetailProduct extends StatelessWidget {
                 'assets/image/products/iphone13/7.jpg',
                 'assets/image/products/iphone13/8.jpg',
               ],
+            ),
+            const SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    'موبایل / موبایل',
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleMedium
+                        ?.copyWith(color: Colors.lightBlue),
+                  ),
+                  Text(
+                    textDirection: TextDirection.rtl,
+                    'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت',
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleLarge
+                        ?.copyWith(fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            'پرسش و پاسخ',
+                            style: TextStyle(color: Colors.lightBlue),
+                          ),
+                          Text(
+                            ' 1',
+                            style: TextStyle(color: Colors.lightBlue),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Icon(
+                          Icons.circle,
+                          color: Colors.grey[200],
+                          size: 8,
+                        ),
+                      ),
+                      const Row(
+                        children: [
+                          Text(
+                            'دیدگاه کاربران',
+                            style: TextStyle(color: Colors.lightBlue),
+                          ),
+                          Text(
+                            ' 48',
+                            style: TextStyle(color: Colors.lightBlue),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Icon(
+                          Icons.circle,
+                          color: Colors.grey[200],
+                          size: 8,
+                        ),
+                      ),
+                      const Text('(67) 4.1'),
+                      Icon(
+                        Icons.star,
+                        color: Colors.amber[400],
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
