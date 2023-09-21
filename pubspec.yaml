@@ -71,6 +71,8 @@ flutter:
     - assets/image/special-offers/
     - assets/image/products/
     - assets/image/products/iphone13/
+    - assets/image/products/HNova10/
+    - assets/image/products/leitu/
     - assets/image/profile-icons/
 
   fonts:

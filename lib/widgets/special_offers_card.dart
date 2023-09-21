@@ -1,8 +1,23 @@
+import 'package:digikala_ui/function/format_prices.dart';
+import 'package:digikala_ui/function/get_discount.dart';
 import 'package:digikala_ui/screen/detail_product.dart';
 import 'package:flutter/material.dart';
 
 class SpecialOffersCard extends StatelessWidget {
-  const SpecialOffersCard({super.key});
+  const SpecialOffersCard({
+    super.key,
+    required this.id,
+    required this.title,
+    required this.price,
+    required this.beforePrice,
+    required this.imagePath,
+  });
+
+  final String id;
+  final String title;
+  final String imagePath;
+  final int price;
+  final int beforePrice;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +28,7 @@ class SpecialOffersCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => const DetailProduct(),
+            builder: (context) => DetailProduct(id: id),
           ));
         },
         child: SizedBox(
@@ -33,13 +48,12 @@ class SpecialOffersCard extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Image.asset(
-                'assets/image/products/iphone13/1.png',
+                imagePath,
                 height: 130,
               ),
               const SizedBox(height: 10),
               Flexible(
-                child: Text(
-                    'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت',
+                child: Text(title,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                     style: Theme.of(context)
@@ -68,7 +82,7 @@ class SpecialOffersCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 1),
                           Text(
-                            '1.000.000',
+                            formatPrices(price),
                             style: Theme.of(context)
                                 .textTheme
                                 .labelLarge
@@ -77,7 +91,7 @@ class SpecialOffersCard extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        '500.000',
+                        formatPrices(beforePrice),
                         style: Theme.of(context).textTheme.labelLarge?.copyWith(
                               color: Colors.grey,
                               decoration: TextDecoration.lineThrough,
@@ -95,7 +109,7 @@ class SpecialOffersCard extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 2),
                       child: Text(
-                        '50%',
+                        '${getDiscount(price, beforePrice).toString()}%',
                         style: Theme.of(context)
                             .textTheme
                             .labelMedium
@@ -109,7 +123,7 @@ class SpecialOffersCard extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               LinearProgressIndicator(
-                value: 0.5,
+                value: 0.6,
                 color: Theme.of(context).colorScheme.secondary,
               ),
               const SizedBox(height: 10),
@@ -129,7 +143,7 @@ class SpecialOffersCard extends StatelessWidget {
                             color: Colors.grey,
                           )),
                       Text(
-                        ' 50%',
+                        ' 60%',
                         style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary),
                       ),

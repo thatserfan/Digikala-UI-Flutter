@@ -13,7 +13,7 @@ class DetailProductBottomSheet extends StatelessWidget {
     final formater = NumberFormat("#,##0");
     String formatPrice = formater.format(price);
     String? formatBeforePrice =
-        beforePrice != null ? formater.format(beforePrice) : null;
+        beforePrice != -1 ? formater.format(beforePrice) : null;
 
     return Material(
       elevation: 10,
