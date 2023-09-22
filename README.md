@@ -1,6 +1,13 @@
 # digikala_ui
 
-A new Flutter project.
+Digikala.com Ui app
+
+output:
+
+
+https://github.com/thatserfan/Digikala-UI-Flutter/assets/84101490/75931113-7aa4-4c8a-aa01-d0b44295049b
+
+
 
 ## Getting Started
 
